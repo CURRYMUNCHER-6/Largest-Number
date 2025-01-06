@@ -14,7 +14,7 @@ color:purple;
 <body>
 <h2>WHICH IS THE LARGEST NUMBER?</h2>
 <label>Enter numbers(comma-separated):</label>
-<input type="text" placeholder="Enter comma-separated values">
+<input type="text" placeholder="Enter comma-separated values" id="num1">
 <button onclick="num()">Find Largest Number</button>
 <p id="result"></p>
 <script>
@@ -22,11 +22,12 @@ function num(){
 var input=document.getElementById("num1").value
 var text=input.split(",")
 var number=[]
-for(var i=0;i<text.length;i++)
+for(var i=0;i<text.length;i++){
 number[i]=parseFloat(text[i])
 }
 var large=Math.max.apply(null,number)
 document.getElementById("result").innerHTML=large
+}
 </script>
 </body>    
 </html>
