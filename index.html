@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head><style>
+  body{
+text-align:center;
+background-image:url(https://images.squarespace-cdn.com/content/v1/54905286e4b050812345644c/cc1fc449-e8b9-4d4b-8688-7fce73c4d155/mika-baumeister-Wpnoqo2plFA-unsplash+%281%29.jpg);
+background-size:cover;
+background-repeat:no-repeat;
+}
+h2{
+color:purple;
+}  
+    </style></head>
+<body>
+<h2>WHICH IS THE LARGEST NUMBER?</h2>
+<label>Enter numbers(comma-separated):</label>
+<input type="text" placeholder="Enter comma-separated values">
+<button onclick="num()">Find Largest Number</button>
+<p id="result"></p>
+<script>
+function num(){
+var input=document.getElementById("num1").value
+var text=input.split(",")
+var number=[]
+for(var i=0;i<text.length;i++)
+number[i]=parseFloat(text[i])
+}
+var large=Math.max.apply(null,number)
+document.getElementById("result").innerHTML=large
+</script>
+</body>    
+</html>
